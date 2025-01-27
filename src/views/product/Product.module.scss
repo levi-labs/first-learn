@@ -1,0 +1,76 @@
+.product{
+    width: 100%;
+    padding: 0 5%;
+    &__text{
+        text-align: center;
+        font-size: 32px;
+        color: #333;
+    }
+    &__card {
+        display: flex;
+        flex-wrap: wrap;
+        &-skeleton{
+            width: 25%;
+            padding: 10px;
+            animation: blinking 2s infinite;
+            &-image{
+                width: 100%;
+                height: 200px;
+                aspect-ratio: 1/1;
+                background-color: #ccc;
+            }
+            &-name{
+                width: 100%;
+                height: 20px;
+                aspect-ratio: 1/1;
+                margin-top: 10px;
+                background-color: #ccc;
+            }
+            &-category{
+                width: 100%;
+                height: 20px;
+                aspect-ratio: 1/1;
+                margin-top: 10px;
+                background-color: #ccc;
+            }
+            &-price{
+                width: 100%;
+                height: 20px;
+                aspect-ratio: 1/1;
+                margin-top: 10px;
+                background-color: #ccc;
+            }
+        }
+        &-item {
+            align-self: right;
+            width: 25%;
+            padding: 10px;
+            &-name {
+                margin-top: 10px;
+                font-size: 20px;
+                font-weight: bold;
+            }
+            &-category {
+                margin-top: 10px;
+                color: #333;
+            }
+            &-price {
+                margin-top: 10px;
+                font-weight: bold;
+            }
+        }
+    }
+
+}
+
+@keyframes blinking{
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
