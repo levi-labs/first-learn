@@ -2,15 +2,18 @@ import Image from 'next/image';
 import style from './Product.module.scss';
 import { useEffect, useState } from 'react';
 import Head from 'next/head';
+import Link from 'next/link';
+import DetailProductPage from './detailProductPage';
+import { productType } from '@/types/product';
 
-type productType = {
-  id: number;
-  name: string;
-  price: number;
-  category: string;
-  size: string;
-  images: string;
-};
+// type productType = {
+//   id: number;
+//   name: string;
+//   price: number;
+//   category: string;
+//   size: string;
+//   images: string;
+// };
 
 const ProductView = ({ products }: { products: productType[] }) => {
   // Mengatur state untuk skeleton
@@ -38,7 +41,11 @@ const ProductView = ({ products }: { products: productType[] }) => {
               </div>
             ))
           : products.map((product: productType) => (
-              <div key={product.id} className={style['product__card-item']}>
+              <Link
+                href={`/product/${product.id}`}
+                key={product.id}
+                className={style['product__card-item']}
+              >
                 <div className={style['product__card-item-image']}>
                   <Image
                     width={400}
@@ -47,7 +54,7 @@ const ProductView = ({ products }: { products: productType[] }) => {
                     alt={product.name}
                     // priority={true} // Gambar diprioritaskan
                     // loading={isSkeletonLoaded ? 'lazy' : 'eager'}
-                    placeholder='blur'
+                    // placeholder='blur'
                     blurDataURL={product.images}
                   />
                 </div>
@@ -63,7 +70,7 @@ const ProductView = ({ products }: { products: productType[] }) => {
                     currency: 'IDR',
                   })}
                 </p>
-              </div>
+              </Link>
             ))}
       </div>
     </div>

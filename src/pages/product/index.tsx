@@ -1,8 +1,7 @@
 import ProductView from '@/views/product';
 import React, { useEffect } from 'react';
 import useSWR from 'swr';
-
-const fetcher = (url: string) => fetch(url).then((res) => res.json());
+import { fetcher } from '@/lib/swr/fetcher';
 
 const ProductPage = () => {
   const [products, setProducts] = React.useState([]);
