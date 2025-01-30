@@ -17,7 +17,7 @@ export function mainMiddleware(req: NextRequest) {
     return res;
    
 }
-export default withAuth(mainMiddleware, ['/product', '/profile']);
+export default withAuth(mainMiddleware, ['/product', '/profile', '/admin']);
 
 // export const config = {
 //     matcher: [

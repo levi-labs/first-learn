@@ -9,3 +9,13 @@
   padding: 2% 5%;
   margin-bottom: 1.5rem;
 }
+.user {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.avatar {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+}

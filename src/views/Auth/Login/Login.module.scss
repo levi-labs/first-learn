@@ -86,3 +86,52 @@
   margin-bottom: 1rem;
   transition: background-color 0.3s ease;
 }
+.error {
+  color: red;
+  background-color: #f5c2c7;
+  margin-bottom: 1rem;
+  text-align: center;
+  width: 100%;
+  max-width: 500px;
+  padding: 0.5rem;
+  border-radius: 4px;
+  border: 1px solid #f5c2c7;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  animation: shake 0.5s ease-in-out;
+
+  @keyframes shake {
+    0%, 100% {
+      transform: translateX(0);
+    }
+    10%, 30%, 50%, 70%, 90% {
+      transform: translateX(-5px);
+    }
+    20%, 40%, 60%, 80% {
+      transform: translateX(5px);
+    }
+  }
+}
+.social-media {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 500px;
+  gap: 1rem;
+}
+.google {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  width: 100%;
+  padding: 0.5rem;
+  border: none;
+  border-radius: 5px;
+//make background color like 3d box
+  background-color: #e2e1e1;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  color: #000000;
+}
